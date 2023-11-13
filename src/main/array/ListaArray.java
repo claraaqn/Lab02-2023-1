@@ -168,10 +168,10 @@ public class ListaArray implements EstruturaElementar{
     @Override
     public void removeInicio() {
         if (this.array != null) {
-            int tamanho = this.array.length -1;
-            int[] n = new int[tamanho];
+            this.indice_fim = this.array.length -1;
+            int[] n = new int[indice_fim];
             if (this.array.length != 1) {
-                for (int i = 1; i < tamanho; i++){
+                for (int i = 1; i < indice_fim; i++){
                     n[i-1] = this.array[i];
                 }
             this.array = n;    
@@ -184,9 +184,9 @@ public class ListaArray implements EstruturaElementar{
     @Override
     public void removeFim() {
         if (this.array != null) {
-            int tamanho = this.array.length-1;
-            int[] n = new int[tamanho];
-            for (int i = 0; i < tamanho; i++){
+            this.indice_fim = this.array.length-1;
+            int[] n = new int[indice_fim];
+            for (int i = 0; i < indice_fim; i++){
                 n[i] = this.array[i];
             }
             this.array = n;    
